@@ -1,11 +1,9 @@
 <template>
-  <div>news</div>
+  <div>User</div>
 </template>
 
 <script>
 export default {
-  name: 'NewsView',
-
   data() {
     return {}
   },
