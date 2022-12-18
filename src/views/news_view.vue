@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import axios from 'axios'
+import { fetchNewsList } from '../api/index'
 export default {
   data() {
     return {
@@ -15,8 +15,7 @@ export default {
 
   created() {
     const _this = this
-    axios
-      .get('https://api.hnpwa.com/v0/news/1.json')
+    fetchNewsList()
       .then((res) => (_this.users = res.data))
       .catch((err) => console.log(err))
   },
@@ -27,5 +26,4 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped></style>
-å
+<style scoped></style>
